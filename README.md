@@ -83,11 +83,11 @@ Dataset ini terdiri dari dua file utama yang digunakan dalam analisis, yaitu mov
 
 File movies.csv berisi informasi detail mengenai setiap film.
 
-<img width="134" alt="image" src="https://github.com/user-attachments/assets/6277310b-b65a-484f-8921-3372a6edac7b" />
+<img width="136" alt="image" src="https://github.com/user-attachments/assets/ee593d94-9f71-4901-a813-8b87432201bc" />
 
 Output dari movies.info() menunjukkan:
 
-<img width="256" alt="image" src="https://github.com/user-attachments/assets/d44b17aa-4810-462d-a3ce-5f8b524eb2e1" />
+<img width="255" alt="image" src="https://github.com/user-attachments/assets/4390dba4-8576-4a0e-a435-d8256ba462dc" />
 
 Dari output di atas, diketahui bahwa file ini memiliki 62.423 entri dan 3 kolom, tanpa ada nilai yang hilang (non-null).
 
@@ -103,11 +103,11 @@ Variabel-variabel pada movies.csv adalah sebagai berikut:
 
 File ratings.csv berisi informasi mengenai rating yang diberikan oleh pengguna terhadap film. Kolom timestamp pada dataset ini tidak digunakan dalam analisis model dan telah dihapus pada tahap awal.
 
-<img width="102" alt="image" src="https://github.com/user-attachments/assets/3c735fee-68e7-4713-8c04-bf40f74455f6" />
+<img width="135" alt="image" src="https://github.com/user-attachments/assets/d43d29ec-c3c2-4fe0-9df9-f267f4256a64" />
 
 Output dari ratings.info()
 
-<img width="299" alt="image" src="https://github.com/user-attachments/assets/23f65206-234e-4c11-ac7b-dda4e0f1dc69" />
+<img width="309" alt="image" src="https://github.com/user-attachments/assets/4c0d68c3-c31e-4c07-9b6d-40caba5d0c87" />
 
 File ini memiliki 25.000.095 entri rating dan 3 kolom relevan setelah penghapusan timestamp, tanpa ada nilai yang hilang.
 
@@ -121,7 +121,7 @@ Variabel-variabel pada ratings.csv (setelah modifikasi) adalah sebagai berikut:
 
 Statistik deskriptif untuk data rating (ratings.describe()):
 
-<img width="287" alt="image" src="https://github.com/user-attachments/assets/9369a6b4-aa63-49af-81e2-7668fc56b8f1" />
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/3275adb3-7a26-45e2-9879-ca700150b993" />
 
 Dari statistik ini, terlihat bahwa rata-rata rating yang diberikan adalah 3.53. Rating minimum adalah 0.5 dan maksimum adalah 5.0.
 
@@ -131,9 +131,9 @@ Untuk mendapatkan pemahaman lebih lanjut mengenai distribusi genre film dalam da
 
 Berikut adalah kode yang digunakan untuk visualisasi:
 
-<img width="708" alt="image" src="https://github.com/user-attachments/assets/44f66225-8bdb-4708-bad4-fd2ef7cd9120" />
+<img width="732" alt="image" src="https://github.com/user-attachments/assets/5ff432eb-865e-4450-9c75-04d43876fd3c" />
 
-<img width="949" alt="image" src="https://github.com/user-attachments/assets/67c31b76-12ad-465e-b07e-590c46c480c9" />
+<img width="966" alt="image" src="https://github.com/user-attachments/assets/ff705428-7669-44fd-b484-8ee8ac80d402" />
 
 **Insight dari Visualisasi Genre:**
 
@@ -153,11 +153,11 @@ Secara umum, langkah-langkah awal berikut dilakukan sebelum masuk ke persiapan s
 
 - Penghapusan data film dengan genre kosong: Baris film yang memiliki nilai genres = (no genres listed) dihapus karena tidak memiliki informasi yang berguna untuk content-based filtering. Langkah ini dilakukan dengan perintah:
 
-<img width="429" alt="image" src="https://github.com/user-attachments/assets/3c76a117-b682-4f1f-9bec-b4ed1b7f3a55" />
+<img width="423" alt="image" src="https://github.com/user-attachments/assets/b56fd8c7-aed9-4f8f-a75f-65b716932011" />
 
 - Penghapusan kolom yang tidak relevan: Kolom timestamp pada dataset ratings dihapus karena tidak dibutuhkan dalam proses pemodelan, baik untuk content-based maupun collaborative filtering. Langkah ini dilakukan dengan:
 
-<img width="416" alt="image" src="https://github.com/user-attachments/assets/c3a05e25-526b-4802-976b-57e316c089e3" />
+<img width="410" alt="image" src="https://github.com/user-attachments/assets/674d92c0-d66f-4ae7-8c03-bde80e70eb1c" />
 
 Selanjutnya, bagian ini akan menguraikan tahapan-tahapan data preparation untuk masing-masing pendekatan secara terstruktur.
 
@@ -365,7 +365,7 @@ di mana 𝑟𝑖 adalah rating aktual dan 𝑟^𝑖 adalah rating prediksi. Metr
 
 Hasil: 
 
-<img width="456" alt="image" src="https://github.com/user-attachments/assets/ce1b8e80-695a-4aae-ab93-8f30347b113e" />
+<img width="475" alt="image" src="https://github.com/user-attachments/assets/5d45b707-44bc-4f15-a35c-c05807bff655" />
 
 Berdasarkan grafik di atas, nilai Root Mean Squared Error (RMSE) pada data latih menunjukkan penurunan yang konsisten seiring bertambahnya jumlah epoch. Hal ini menandakan bahwa model berhasil mempelajari pola preferensi pengguna terhadap film secara efektif selama proses pelatihan.
 
